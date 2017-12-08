@@ -1,0 +1,127 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Teamwork",
+    "version": "v0.0.0"
+  },
+  "host": "yat.teamwork.com",
+  "schemes": [
+    "https"
+  ],
+  "basePath": "/",
+  "paths": {
+    "/projects.json": {
+      "get": {
+        "summary": "Projects List",
+        "description": "",
+        "operationId": "5f80d5d0-36d0-4c72-9703-cc6515ec2dd7",
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "\"Content-Type\"",
+            "required": false,
+            "in": "header"
+          },
+          {
+            "type": "string",
+            "default": "BASIC twp_TEbBXGCnvl2HfvXWfkLUlzx92e3T:xxx",
+            "name": "\"Authorization\"",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/projects/339988/tasklists.json": {
+      "get": {
+        "summary": "Tasks List for Project",
+        "description": "",
+        "operationId": "13bb2d59-bcdf-4575-8b12-da4515a283f4",
+        "parameters": [
+          {
+            "type": "string",
+            "default": "application/json",
+            "name": "\"Content-Type\"",
+            "required": false,
+            "in": "header"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/tasklists/1115157/tasks.json": {
+      "post": {
+        "summary": "Add Task To Taskslist",
+        "description": "",
+        "operationId": "cce7a8b7-242e-4f19-a59e-615429255188",
+        "consumes": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n  \"todo-item\": {\n    \"content\": \"Task Item\",\n    \"notify\": false,\n    \"description\": \"Task Item Description\",\n    \"due-date\": \"20180405\",\n    \"start-date\": \"20180402\",\n    \"private\": \"0\",\n    \"grant-access-to\": \"\",\n    \"priority\": \"high\",\n    \"progress\": \"20\",\n    \"estimated-minutes\": \"0\",\n    \"responsible-party-id\": \"999\",\n    \"attachments\": [],\n    \"tasklistId\": \"\",\n    \"pendingFileAttachments\": \"\",\n    \"tags\":\"api,documentation\",\n    \"columnId\":\"123\"\n  }\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      }
+    },
+    "/tasks/{id}.json": {
+      "put": {
+        "summary": "Edit Task By ID",
+        "description": "",
+        "operationId": "1e012a08-5246-4867-8c32-f652b3f453ad",
+        "consumes": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "required": false,
+            "schema": {
+              "type": "string",
+              "default": "{\n  \"todo-item\": {\n    \"content\": \"Task Item\",\n    \"notify\": false,\n    \"description\": \"Task Item Description\",\n    \"due-date\": \"20140405\",\n    \"start-date\": \"20140402\",\n    \"private\": \"0\",\n    \"grant-access-to\": \"\",\n    \"priority\": \"high\",\n    \"progress\": \"20\",\n    \"estimated-minutes\": \"0\",\n    \"responsible-party-id\": \"999\",\n    \"attachments\": [],\n    \"tasklistId\": \"\",\n    \"pendingFileAttachments\": \"\",\n    \"tags\": \"api,documentation\",\n    \"columnId\": \"123\"\n  }\n}"
+            },
+            "in": "body",
+            "name": "body"
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Task By ID",
+        "description": "",
+        "operationId": "6d06b1b1-785f-448d-b118-74a053245d54",
+        "responses": {
+          "default": {
+            "description": "no response description was provided for this operation"
+          }
+        },
+        "parameters": []
+      }
+    }
+  },
+  "tags": []
+}
